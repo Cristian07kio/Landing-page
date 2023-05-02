@@ -4,17 +4,73 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./assets/styles.css" />
     <title>Landing Page</title>
   </head>
   <body>
-    <nav>
-      <img src="img/CrisNav.png" alt="" height="60px" />
-      <ul class="nav">
-        <li class="nav-enlace"><a href="#">Contact</a></li>
-        <li class="nav-enlace"><a href="#">Take Away</a></li>
-        <li class="nav-enlace"><a href="#">Product</a></li>
-      </ul>
-    </nav>
+    <header>
+      <img
+        src="./assets/img/logo/CrisNav.png"
+        alt="logo Crisnav"
+        class="logo"
+      />
+      <nav class="navbar">
+        <ul class="navbar-list">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Take Away</a></li>
+          <li><a href="#">Product</a></li>
+        </ul>
+        <img
+          src="./assets/img/cart-icon.svg"
+          alt="card logo"
+          class="cart-icon"
+        />
+      </nav>
+    </header>
+    <main>
+      <section id="hero">
+        <div class="hero-info">
+          <h1>Lo mejor para tu ejercito</h1>
+          <p>
+            ¡Visita <span>Crisnav</span> la primer armeria online internacional!
+          </p>
+          <div class="botones">
+            <a href="#" class="hero a1">Inicia Sesión</a>
+            <a href="#" class="hero a2">Registrate</a>
+          </div>
+        </div>
+        <div class="hero-card">
+          <img
+            src="./assets/img/cards/Card Principal.png"
+            alt="card principal"
+          />
+          <div class="hero-car-info">
+            <div>
+              <div class="hero-card-top">
+                <h2>¡Nueva colección Estelar!</h2>
+              </div>
+              <div class="hero-card-bottom">
+                <div class="her-card-creator">
+                  <img src="./assets/img/logo/Creador.png" alt="creator" />
+                </div>
+                <div class="hero-card-price">
+                  <p>Precio</p>
+                  <span>$5500</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="description">
+        <p>
+          Aqui en <span>Crisnav</span> encontrás lo que necesites para tu
+          ejercito desde lanzas personalizadas hasta escudos ligeros pero
+          indestructibles. ¡Date una vuelta por nuestra armeria o consultá
+          nuestro catálogo online!
+        </p>
+      </section>
+    </main>
   </body>
 </html>
