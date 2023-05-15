@@ -3,7 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   text-decoration: none;
-  list-style-type: none;
+  /*list-style-type: none;*/
 }
 :root {
   /* bg colours */
@@ -13,6 +13,8 @@
   --bg-white: white;
   --bg-electric: lightblue;
   --bg-gray: gray;
+  --cr-background: linear-gradient(to bottom, darkgoldenrod, #181818);
+  --red-bg: linear-gradient(to bottom, #000, #dd1818);
   /*text colours*/
   --text-firebrick: firebrick;
   --text-white: white;
@@ -27,12 +29,12 @@ body {
 }
 /* header */
 header {
-  background: var(--primary);
+  background: linear-gradient(to bottom, #333333, #dd1818);
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 45px;
+  height: 60px;
   padding: 0 30px;
   position: fixed;
   top: 0;
@@ -40,22 +42,32 @@ header {
 }
 
 .logo {
-  height: 45px;
+  height: 60px;
 }
 
-.navbar,
+.navbar-list :hover {
+  transform: scale(1.2);
+}
+
 .navbar-list {
   display: flex;
   align-items: center;
   justify-content: center;
+  list-style-type: none;
+  gap: 30px;
 }
 
 .navbar {
-  gap: 150px;
+  display: flex;
+  gap: 20px;
 }
-
-.navbar-list {
-  gap: 30px;
+.navbar i {
+  font-size: 36px;
+  color: var(--bg-white);
+  display: none;
+}
+#toggle-menu {
+  display: none;
 }
 
 .navbar-list a {
@@ -90,10 +102,11 @@ main {
   color: white;
   width: 100%;
 }
+
 /* section */
 
 #hero {
-  margin-top: 45px;
+  margin-top: 60px;
   padding: 70px 0;
   max-width: 1200px;
   display: flex;
@@ -115,7 +128,10 @@ main {
   width: 80%;
   min-width: 500px;
   font-weight: 800;
-  color: var(--text-white);
+  color: transparent;
+  background: linear-gradient(5deg, #1c0808, #dd1818);
+  background-clip: text;
+  -webkit-background-clip: text;
 }
 
 .hero-info p > span {
@@ -140,7 +156,7 @@ main {
 
 .hero-card {
   width: 300px;
-  background: var(--secondary);
+  background: var(--cr-background);
   padding: 20px;
   border-radius: 15px;
   display: flex;
@@ -202,4 +218,122 @@ main {
 
 #description p > span {
   font-weight: 800;
+}
+/* section info */
+
+#info {
+  padding: 70px 0;
+  max-width: 1200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 80px;
+}
+
+#info h2 {
+  font-size: 32px;
+  font-weight: 800;
+}
+
+.info-cards-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.info-card img {
+  width: 95px;
+}
+
+.info-card {
+  width: 300px;
+  height: 290px;
+  padding: 40px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: var(--cr-background);
+  border-radius: 10px;
+  gap: 20px;
+}
+
+.info-card h3 {
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.info-card p {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--primary);
+}
+/* footer section */
+
+footer {
+  background: var(--red-bg);
+  color: var(--bg-white);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 10px 0;
+  border-top: solid 2px;
+  border-bottom: solid 2px;
+  border-color: var(--secondary);
+}
+
+footer h2 {
+  font-size: 28px;
+  font-weight: 600;
+}
+
+footer a {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--secondary);
+}
+
+footer img {
+  width: 150px;
+}
+footer ul {
+  list-style-type: none;
+}
+/*Mediaquerie Tablet*/
+
+/*@media (max-width: 992px) {
+}*/
+
+/*Mediaquerie Mobile*/
+
+@media (max-width: 576px) {
+  .navbar-list {
+    background: linear-gradient(to bottom, #000, #dd1818);
+    width: 100%;
+    height: calc(100vh - 60px);
+    position: absolute;
+    top: 80px;
+    left: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    display: none;
+  }
+  .navbar i {
+    display: block;
+  }
+  #toggle-menu:checked ~ .navbar-list {
+    display: flex;
+  }
+  .hero-card {
+    display: none;
+  }
+  footer {
+    display: flex;
+    flex-direction: column;
+  }
 }
