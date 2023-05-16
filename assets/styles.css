@@ -28,14 +28,14 @@ body {
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 /* header */
-header {
+.header {
   background: linear-gradient(to bottom, #333333, #dd1818);
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 60px;
-  padding: 0 30px;
+  padding: 0 50px;
   position: fixed;
   top: 0;
   z-index: 2;
@@ -62,9 +62,9 @@ header {
   gap: 20px;
 }
 .navbar i {
-  font-size: 36px;
-  color: var(--bg-white);
   display: none;
+  font-size: 30px;
+  color: var(--bg-white);
 }
 #toggle-menu {
   display: none;
@@ -99,7 +99,6 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: white;
   width: 100%;
 }
 
@@ -126,7 +125,7 @@ main {
 .hero-info h1 {
   font-size: 48px;
   width: 80%;
-  min-width: 500px;
+  min-width: 100px;
   font-weight: 800;
   color: transparent;
   background: linear-gradient(5deg, #1c0808, #dd1818);
@@ -155,7 +154,7 @@ main {
 }
 
 .hero-card {
-  width: 300px;
+  width: 200px;
   background: var(--cr-background);
   padding: 20px;
   border-radius: 15px;
@@ -214,6 +213,7 @@ main {
   width: 100%;
   text-align: center;
   padding: 10px 100px;
+  color: var(--text-white);
 }
 
 #description p > span {
@@ -234,14 +234,17 @@ main {
 #info h2 {
   font-size: 32px;
   font-weight: 800;
+  color: var(--text-white);
 }
-
+#info p {
+  color: var(--text-white);
+}
 .info-cards-container {
   display: flex;
   justify-content: space-around;
   align-items: flex-start;
   flex-wrap: wrap;
-  gap: 40px;
+  gap: 10px;
 }
 
 .info-card img {
@@ -264,12 +267,12 @@ main {
 .info-card h3 {
   font-size: 28px;
   font-weight: 600;
+  color: var(--primary);
 }
 
 .info-card p {
   font-size: 14px;
   font-weight: 700;
-  color: var(--primary);
 }
 /* footer section */
 
@@ -304,20 +307,33 @@ footer ul {
   list-style-type: none;
 }
 /*Mediaquerie Tablet*/
-
-/*@media (max-width: 992px) {
-}*/
-
+/*
+@media (max-width: 992px) {
+  #hero {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .botones {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  footer {
+    display: flex;
+    flex-direction: column;
+  }
+}
+*/
 /*Mediaquerie Mobile*/
 
 @media (max-width: 576px) {
   .navbar-list {
     background: linear-gradient(to bottom, #000, #dd1818);
-    width: 100%;
-    height: calc(100vh - 60px);
+    width: 50%;
+    height: calc(70vh - 60px);
     position: absolute;
-    top: 80px;
-    left: 0;
+    top: 60px;
+    right: 0;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -329,8 +345,22 @@ footer ul {
   #toggle-menu:checked ~ .navbar-list {
     display: flex;
   }
+  #hero {
+    flex-direction: column;
+  }
+  .hero-info h1 {
+    width: 100%;
+    min-width: 10px;
+    font-weight: 800;
+    font-size: 45px;
+  }
+  .botones {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
   .hero-card {
-    display: none;
+    min-width: 80px;
   }
   footer {
     display: flex;
