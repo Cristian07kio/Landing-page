@@ -307,23 +307,44 @@ footer ul {
   list-style-type: none;
 }
 /*Mediaquerie Tablet*/
-/*
+
 @media (max-width: 992px) {
-  #hero {
+  .navbar-list {
+    background: linear-gradient(to bottom, #000, #dd1818);
+    width: 40%;
+    height: calc(30vh - 60px);
+    position: absolute;
+    top: 60px;
+    right: 0;
     flex-direction: column;
-    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    display: none;
+    font-size: 55px;
+    gap: 5px;
+  }
+  .navbar i {
+    display: block;
+  }
+  #toggle-menu:checked ~ .navbar-list {
+    display: flex;
+  }
+  .hero-info h1 {
+    width: 100%;
+    min-width: 10px;
+    font-weight: 800;
+    font-size: 45px;
   }
   .botones {
     display: flex;
     flex-direction: column;
     gap: 10px;
   }
-  footer {
-    display: flex;
-    flex-direction: column;
+  .hero-card {
+    min-width: 80px;
   }
 }
-*/
+
 /*Mediaquerie Mobile*/
 
 @media (max-width: 576px) {
