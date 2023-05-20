@@ -128,7 +128,7 @@ main {
   min-width: 100px;
   font-weight: 800;
   color: transparent;
-  background: linear-gradient(5deg, #1c0808, #dd1818);
+  background: linear-gradient(5deg, var(--primary), #dd1818);
   background-clip: text;
   -webkit-background-clip: text;
 }
@@ -234,7 +234,10 @@ main {
 #info h2 {
   font-size: 32px;
   font-weight: 800;
-  color: var(--text-white);
+  color: transparent;
+  background: linear-gradient(5deg, var(--primary), #dd1818);
+  background-clip: text;
+  -webkit-background-clip: text;
 }
 #info p {
   color: var(--text-white);
@@ -292,6 +295,10 @@ footer {
 footer h2 {
   font-size: 28px;
   font-weight: 600;
+  color: transparent;
+  background: linear-gradient(5deg, var(--primary), #dd1818);
+  background-clip: text;
+  -webkit-background-clip: text;
 }
 
 footer a {
@@ -311,8 +318,8 @@ footer ul {
 @media (max-width: 992px) {
   .navbar-list {
     background: linear-gradient(to bottom, #000, #dd1818);
-    width: 40%;
-    height: calc(30vh - 60px);
+    width: 50%;
+    height: calc(50vh - 60px);
     position: absolute;
     top: 60px;
     right: 0;
@@ -320,8 +327,6 @@ footer ul {
     align-items: center;
     justify-content: center;
     display: none;
-    font-size: 55px;
-    gap: 5px;
   }
   .navbar i {
     display: block;
